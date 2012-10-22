@@ -13,11 +13,11 @@
   <!-- These are the styles you'll add to make the slides look great -->
   <link rel="stylesheet" href="css/styles.css" />
   
-  <title>Example Slideshow</title>
+  <title>Scala - For C++ Programmers</title>
 </head>
 <body>
-  <header>
-    <h1>Example Slide Show</h1>
+  <header class="showOnMouse">
+    <h1>Scala - For C++ Programmers</h1>
     <nav>
       <ul>
         <li><button id="prev-btn" title="Previous slide">Previous Slide</button></li>
@@ -31,110 +31,54 @@
     <!-- Begin slides -->
     <section>
       <hgroup>
-        <h1>Hello, interwebs explorer.</h1>
-        <h2>How to use this thing</h2>
+        <h1>Scala</h1>
+        <h2>For C++ Programmers</h2>
       </hgroup>
-      <p>Press the right arrow, down arrow, or spacebar to advance; press the left arrow or up arrow to move backward.</p>
-  		<p>You can also click the left and right arrows in the control bar at the top.</p>
+      
+	  
+		
+		<figure style="width:40em; margin-top: 20em;">
+		<pre class="syntax scala">
+object HelloWorld {
+  def main(args: Array[String]) {
+    println("Hello, world!")
+  }
+}		</pre>
+		</figure>
+		
+		<p style="position:absolute; bottom: 0;">Tip: Use arrow keys or spacebar.</p>
+		
     </section>
     <section>
       <hgroup>
         <h1>Intraslide animation</h1>
         <h2>I'm calling these "actions"</h2>
       </hgroup>
-        <p>You can hide/reveal content within the slides by giving something a class of "action". Actions are revealed in the order in which they occur in the HTML. Advancing to the next slide will first reveal actions on the page if they exist.</p>
-  	  <pre>
-&lt;p class=&quot;action&quot;&gt;This will be hidden when the slide loads&lt;/p&gt;
-  	  </pre>	
-      <ul>
-        <li class="action">Bullet point</li>
-        <li class="action">Another bullet point</li>
-        <li class="action">Yet another bullet point</li>
-        <li class="action">You get the idea</li>
-      </ul>
-    </section>
-    <section>
-      <hgroup>
-        <h1>Custom events</h1>
-        <h2>These may or may not be useful for you</h2>
-      </hgroup>
-      <p>When a new slide is loaded, a "newSlide" event is fired. (Take a look at your console.)</p>
-  		<p>There's also an event triggered when a new "action" is revealed.</p>
-  		<pre>
-//Example usage
-$(&#x27;html&#x27;).bind(&#x27;newSlide&#x27;, function(e,id) { console.log(id) });
-  		</pre>
-    </section>
-  	<section>
-      <hgroup>
-        <h1>Building slides</h1>
-        <h2>It's easy</h2>
-      </hgroup>
-      <p>Each slide goes within a <code>section</code> element, like this:</p>
-  		<pre>
-&lt;section&gt;
-    &lt;hgroup&gt;
-        &lt;h1&gt;Your heading&lt;/h1&gt;
-        &lt;h2&gt;Your subheading&lt;/h2&gt;
-    &lt;/hgroup&gt;
-    &lt;p&gt;All your slide content...&lt;/p&gt;
-&lt;/section&gt;
-  		</pre>
-  	  <p>You don't have to worry about numbering the slides. The script will count the number of <code>section</code> elements and give each one a numbered ID on page load.</p>
-    </section>
-  	<section>
-      <hgroup>
-        <h1>Plays well with images</h1>
-      </hgroup>
-
-      <img src="images/best-stegosaurus.png" alt="The Best Dinosaur" />
+	  
       
-    </section>    
-    <section>
-      <hgroup>
-        <h1>Other details</h1>
-        <h2>Small stuff</h2>
-      </hgroup>
-  		<p>The hash updates with each slide.</p>
-  		<p>The slideshow itself has 3 dependencies: jQuery, htmlSlides.js, and a small stylesheet.</p>
-  		<p>The slide script has one option, the option to hide the toolbar at the top:</p>
-  		<pre>
-htmlSlides.init({ toolbar: true });
-  		</pre>
     </section>
-  	<section>
-      <hgroup>
-        <h1>That's all</h1>
-      </hgroup>
-      <p>Get it at <a href="http://github.com/robflaherty/html-slideshow">github</a>.</p>
-      <p>- Rob Flaherty / <a href="http://twitter.com/robflaherty">@robflaherty</a> / <a href="mailto:rob@ravelrumba.com">rob@ravelrumba.com</a></p>
-    </section>
+    
     <!-- /End slides -->
     
   </div>
   <!-- /deck -->
+  
+  
+  
   <script src="html-slideshow/lib/jquery-1.5.2.min.js"></script>
   <script src="html-slideshow/lib/jquery.jswipe-0.1.2.js"></script>  
+  <script src="jquery-syntax/public/jquery.syntax.min.js"></script>
   <script src="html-slideshow/lib/htmlSlides.js"></script>
   <script>
     //Do our business when the DOM is ready for us
     $(function() {
-      
-      //You can trigger Javascript based on the slide number like this:
-      $('html').bind('newSlide', function(e, id) { 
-        switch(id) {
-          case 2:
-            console.log('This is the second slide.');;
-            break;
-          case 3:
-            console.log('Hello, third slide.');
-            break;
-        }
-      });
 
       //One little option: hideToolbar (boolean; default = false)
-      htmlSlides.init({ hideToolbar: true });
+      htmlSlides.init({ hideToolbar: false });
+	  
       
+	  // This function highlights (by default) pre and code tags which are annotated correctly.
+      $.syntax({root: 'jquery-syntax/public/', blockLayout: 'plain', theme: 'base'});
     });
   </script>
   </body>

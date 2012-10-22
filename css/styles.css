@@ -1,3 +1,4 @@
+
 @font-face {
 	font-family: 'ChunkFiveRegular';
 	src: url('../fonts/Chunkfive-webfont.eot');
@@ -6,7 +7,74 @@
 	font-style: normal;
 }
 
-body{ background:#f5f6f6; }
-#deck h1 { font-family: 'ChunkFiveRegular', Arial; font-size:50px; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8); }
-#deck h2 { font-family: 'ChunkFiveRegular', Arial; font-size: 30px; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8); }
-#deck p, #deck li { font-family: Arial; font-size:20px; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8); }
+body{ background:black;color:white; }
+#deck h1 { font-family: 'ChunkFiveRegular', Arial; font-size:50px; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2); }
+#deck h2 { font-family: 'ChunkFiveRegular', Arial; font-size: 30px; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2); }
+/*#deck p, #deck li { font-family: Arial; font-size:20px; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8); }*/
+
+
+.syntax {
+	/*line-height: normal !important;*/
+	font-size: 2em;
+	background: #eee;
+	color: black;
+	border:3px solid #888;
+}
+
+.syntax pre {
+	font-size: 1em;
+}
+
+ol.syntax  li{
+	list-style-type: none;
+}
+
+html, body, #deck, .slide {
+	height: 100%;
+}
+
+section {
+	padding: 30px;
+}
+
+header, .slide {
+	box-sizing: border-box;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+html {
+	overflow: visible;
+}
+
+/* Better fade in & out */
+@-webkit-keyframes fadeOut { 0% { opacity:1; } 90% { opacity:1; } 100% { opacity:0; } }
+@-moz-keyframes fadeOut { 0% { opacity:1; } 90% { opacity:1; } 100% { opacity:0; } }
+@keyframes fadeOut { 0% { opacity:1; } 90% { opacity:1; } 100% { opacity:0; } }
+
+.showOnMouse {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	
+	-webkit-animation:fadeOut ease-out 1;
+	-moz-animation:fadeOut ease-out 1;
+	animation:fadeOut ease-out 1;
+	
+	-webkit-animation-fill-mode:none;
+	-moz-animation-fill-mode:none;
+	animation-fill-mode:none;
+	
+	-webkit-animation-duration:5s;
+	-moz-animation-duration:5s;
+	animation-duration:5s;
+}
+ 
+.showOnMouse:hover {
+	opacity: 1;
+}
