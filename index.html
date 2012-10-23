@@ -7,10 +7,12 @@
   <script src="html-slideshow/lib/html5shim.js"></script>
   <![endif]-->  
   
-  <!-- These are some core styles the slideshow app requires -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
   <link rel="stylesheet" href="html-slideshow/lib/styles.css" />
   
-  <!-- These are the styles you'll add to make the slides look great -->
+  <link href='http://fonts.googleapis.com/css?family=Asap:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css" />
   
   <title>Scala - For C++ Programmers</title>
@@ -31,13 +33,13 @@
     <!-- Begin slides -->
     <section>
       <hgroup>
-        <h1>Scala</h1>
-        <h2>For C++ Programmers</h2>
+        <h1><img src="images/scala.svg" style="height:0.8em;">Scala</h1>
+        <h2>For C++ Programmers - Part 1</h2>
       </hgroup>
       
-	  
+	  <p>
 		
-		<figure style="width:40em; margin-top: 20em;">
+		<figure style="width:21em; margin-top: 5em;">
 		<pre class="syntax scala">
 object HelloWorld {
   def main(args: Array[String]) {
@@ -51,11 +53,19 @@ object HelloWorld {
     </section>
     <section>
       <hgroup>
-        <h1>Intraslide animation</h1>
-        <h2>I'm calling these "actions"</h2>
+        <h1><img src="images/java.svg" style="height:1em;">Java</h1>
+        <h2>In one slide</h2>
       </hgroup>
 	  
-      
+      <ul>
+		<li class="action">Value Types & Objects</li>
+		<li class="action">Pass by value (Including references to objects)</li>
+		<li class="action">Single inheritance</li>
+		<li class="action">Interfaces</li>
+        <li class="action">Generics</li>
+		<li class="action">Exceptions</li>
+      </ul>
+	  
     </section>
     
     <!-- /End slides -->
@@ -65,7 +75,7 @@ object HelloWorld {
   
   
   
-  <script src="html-slideshow/lib/jquery-1.5.2.min.js"></script>
+  <script src="html-slideshow/lib/jquery-1.6.4.min.js"></script>
   <script src="html-slideshow/lib/jquery.jswipe-0.1.2.js"></script>  
   <script src="jquery-syntax/public/jquery.syntax.min.js"></script>
   <script src="html-slideshow/lib/htmlSlides.js"></script>
@@ -74,7 +84,7 @@ object HelloWorld {
     $(function() {
 
       //One little option: hideToolbar (boolean; default = false)
-      htmlSlides.init({ hideToolbar: false });
+      htmlSlides.init({});
 	  
       
 	  // This function highlights (by default) pre and code tags which are annotated correctly.

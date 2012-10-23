@@ -1,6 +1,6 @@
 [submodule "html-slideshow"]
 	path = html-slideshow
-	url = git://github.com/robflaherty/html-slideshow.git
+	url = git://github.com/codingwell/html-slideshow.git
 [submodule "jquery-syntax"]
 	path = jquery-syntax
 	url = git://github.com/ioquatix/jquery-syntax.git
