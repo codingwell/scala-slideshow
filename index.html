@@ -15,11 +15,11 @@
   <link href='http://fonts.googleapis.com/css?family=Asap:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css" />
   
-  <title>Scala - For C++ Programmers</title>
+  <title>C++ to Scala - A quick taste</title>
 </head>
 <body>
   <header class="showOnMouse">
-    <h1>Scala - For C++ Programmers</h1>
+    <h1>C++ to Scala - A quick taste</h1>
     <nav>
       <ul>
         <li><button id="prev-btn" title="Previous slide">Previous Slide</button></li>
@@ -33,13 +33,16 @@
     <!-- Begin slides -->
     <section>
       <hgroup>
-        <h1><img src="images/scala.svg" style="height:0.8em;">Scala</h1>
-        <h2>For C++ Programmers - Part 1</h2>
+        <h1>C++ to <img src="images/scala.svg" style="height:0.8em;">Scala</h1>
+        <h2>A quick taste</h2>
       </hgroup>
       
-	  <p>
+	  <blockquote style="max-width:30em; margin-top: 1em; margin: 0 auto;" class="indent" cite="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html">
+	  <p>A drunken Martin Odersky sees a Reese's Peanut Butter Cup ad featuring somebody's peanut butter getting on somebody else's chocolate and has an idea.</p>
+	  <p>He creates Scala, a language that unifies constructs from both object oriented and functional languages. This pisses off both groups and each promptly declares jihad.</p>
+	  </blockquote>
 		
-		<figure style="width:21em; margin-top: 5em;">
+		<figure style="width:20em; margin-top: 1em; overflow: auto">
 		<pre class="syntax scala">
 object HelloWorld {
   def main(args: Array[String]) {
@@ -47,8 +50,8 @@ object HelloWorld {
   }
 }		</pre>
 		</figure>
-		
-		<p style="position:absolute; bottom: 0;">Tip: Use arrow keys or spacebar.</p>
+				
+		<p style="position:absolute; bottom: 0; font-size:medium;">Tip: Use arrow keys or spacebar.</p>
 		
     </section>
     <section>
@@ -57,13 +60,27 @@ object HelloWorld {
         <h2>In one slide</h2>
       </hgroup>
 	  
-      <ul>
-		<li class="action">Value Types & Objects</li>
-		<li class="action">Pass by value (Including references to objects)</li>
-		<li class="action">Single inheritance</li>
-		<li class="action">Interfaces</li>
-        <li class="action">Generics</li>
-		<li class="action">Exceptions</li>
+      <ul class="action">
+		<li>No Destructor</li>
+		<li>References</li>
+		<li>final vs const (Object * const)</li>
+        <li>Generics & Type Erasure</li>
+		<li>Exceptions</li>
+      </ul>
+	  
+    </section>
+	<section>
+      <hgroup>
+        <h1><img src="images/scala.svg" style="height:0.8em;">The Void</h1>
+        <h2>Unit, Nothing, Nil, None, & Null</h2>
+      </hgroup>
+	  
+      <ul class="action">
+		<li>Unit - Basically 'void'...</li>
+		<li>Nothing - 'Nothing' extends everything</li>
+		<li>Nil - An empty array of 'Nothing'</li>
+        <li>None - Subclass of Option</li>
+		<li>Null - Legacy support for Java</li>
       </ul>
 	  
     </section>
