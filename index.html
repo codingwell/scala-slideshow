@@ -57,22 +57,81 @@ object HelloWorld {
     <section>
       <hgroup>
         <h1><img src="images/java.svg" style="height:1em;">Java</h1>
-        <h2>In one slide</h2>
+        <h2>Limitations</h2>
       </hgroup>
 	  
       <ul class="action">
 		<li>No Destructor</li>
-		<li>References</li>
 		<li>final vs const (Object * const)</li>
         <li>Generics & Type Erasure</li>
-		<li>Exceptions</li>
+      </ul>
+	  
+    </section>
+	<section>
+      <hgroup>
+        <h1><img src="images/scala.svg" style="height:0.8em;">Packages</h1>
+        <h2>Aka. Namespaces</h2>
+      </hgroup>
+	  
+	  <figure style="width:36em; margin-top: 1em; overflow: auto">
+	  <pre class="syntax scala">
+package net.codingwell.myapp
+
+import net.codingwell.myapp.magic.MagicFactory
+import net.codingwell.myapp.useful.{OneClass, AnotherClass}
+import net.codingwell.{VeryVeryLongNameForClass => ShortName}
+import net.codingwell.utils._</pre>
+	  </figure>
+	  
+	  <h3>Access Modifiers</h3>
+      <ul class="action">
+		<li>public</li>
+		<li>protected</li>
+		<li>private</li>
+		<li>protected[utils]</li>
+		<li>private[myapp]</li>
+		<li>private[this]</li>
+      </ul>
+	  
+	  <ul class="action">
+		
       </ul>
 	  
     </section>
 	<section>
       <hgroup>
         <h1><img src="images/scala.svg" style="height:0.8em;">The Void</h1>
-        <h2>Unit, Nothing, Nil, None, & Null</h2>
+        <h2>Unit, Nothing, Nil, None, &amp; Null</h2>
+      </hgroup>
+	  
+      <ul class="action">
+		<li>Unit - Basically 'void'...</li>
+		<li>Nothing - 'Nothing' extends everything</li>
+		<li>Nil - An empty array of 'Nothing'</li>
+        <li>None - Subclass of Option</li>
+		<li>Null - Legacy support for Java</li>
+      </ul>
+	  
+    </section>
+	<section>
+      <hgroup>
+        <h1><img src="images/scala.svg" style="height:0.8em;">Variance</h1>
+        <h2>Covariance &amp; Contravariance</h2>
+      </hgroup>
+	  
+      <ul class="action">
+		<li>Unit - Basically 'void'...</li>
+		<li>Nothing - 'Nothing' extends everything</li>
+		<li>Nil - An empty array of 'Nothing'</li>
+        <li>None - Subclass of Option</li>
+		<li>Null - Legacy support for Java</li>
+      </ul>
+	  
+    </section>
+	<section>
+      <hgroup>
+        <h1><img src="images/scala.svg" style="height:0.8em;">Tuples</h1>
+        <h2>std::pair is so 1994</h2>
       </hgroup>
 	  
       <ul class="action">
