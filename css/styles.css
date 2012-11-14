@@ -54,3 +54,9 @@ ol.syntax  li{
 .showOnMouse:hover {
 	opacity: 1;
 }
+
+.codeFigure {
+width:36em;
+margin-top: 1em;
+overflow: auto;
+}

@@ -42,7 +42,7 @@
 	  <p>He creates Scala, a language that unifies constructs from both object oriented and functional languages. This pisses off both groups and each promptly declares jihad.</p>
 	  </blockquote>
 		
-		<figure style="width:20em; margin-top: 1em; overflow: auto">
+		<figure class="codeFigure" style="width:23em">
 		<pre class="syntax scala">
 object HelloWorld {
   def main(args: Array[String]) {
@@ -73,7 +73,7 @@ object HelloWorld {
         <h2>Aka. Namespaces</h2>
       </hgroup>
 	  
-	  <figure style="width:36em; margin-top: 1em; overflow: auto">
+	  <figure class="codeFigure" style="width:37em">
 	  <pre class="syntax scala">
 package net.codingwell.myapp
 
@@ -100,11 +100,35 @@ import net.codingwell.utils._</pre>
     </section>
 	<section>
       <hgroup>
+        <h1><img src="images/scala.svg" style="height:0.8em;">Packages</h1>
+        <h2>Access Modifiers</h2>
+      </hgroup>
+	  
+      <ul>
+		<li>public</li>
+		<li>protected</li>
+		<li>private</li>
+		<li>protected[utils]</li>
+		<li>private[myapp]</li>
+		<li>private[this]</li>
+      </ul>
+	  
+	  <ul class="action">
+		
+      </ul>
+	  
+    </section>
+	<section>
+      <hgroup>
         <h1><img src="images/scala.svg" style="height:0.8em;">Type Inference</h1>
         <h2>Auto</h2>
       </hgroup>
 	  
-      
+	  <figure class="codeFigure" style="width:20em">
+      <pre class="syntax scala">
+		val variable = doSomething( "parameter" )
+	  </pre>
+	  </figure>  
 	  
     </section>
 	<section>
