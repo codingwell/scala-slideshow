@@ -55,6 +55,10 @@ ol.syntax  li{
 	opacity: 1;
 }
 
+.codeFigure, .syntax-theme-base .syntax {
+    font-family: monospace !important;
+}
+
 .codeFigure {
 width:36em;
 margin-top: 1em;
