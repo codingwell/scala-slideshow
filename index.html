@@ -12,7 +12,7 @@
   
   <link rel="stylesheet" href="html-slideshow/lib/styles.css" />
   
-  <link href='http://fonts.googleapis.com/css?family=Asap:700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Asap:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css" />
   
   <title>C++ to Scala - A quick taste</title>
@@ -43,8 +43,8 @@
 	  <p>A drunken Martin Odersky sees a Reese's Peanut Butter Cup ad featuring somebody's peanut butter getting on somebody else's chocolate and has an idea.</p>
 	  <p>He creates Scala, a language that unifies constructs from both object oriented and functional languages. This pisses off both groups and each promptly declares jihad.</p>
 	  </blockquote>
-		
-		<figure class="codeFigure" style="width:43ex">
+	  <div style="text-align:center">
+		<figure class="codeFigure">
 		<pre class="syntax scala">
 object HelloWorld {
   def main(args: Array[String]) {
@@ -52,8 +52,9 @@ object HelloWorld {
   }
 }		</pre>
 		</figure>
+      </div>
 				
-		<p style="position:absolute; bottom: 0; font-size:medium;">Tip: Use arrow keys or spacebar.</p>
+      <p style="position:absolute; bottom: 0; font-size:medium;">Tip: Use arrow keys or spacebar.</p>
 		
     </section>
     
@@ -78,14 +79,16 @@ object HelloWorld {
         <h1><img src="images/java.svg" style="height:1em;">Static</h1>
       </hgroup>
       
-          	<figure class="codeFigure" style="width:43ex">
-		<pre class="syntax scala">
+      <div style="text-align:center">
+        <figure class="codeFigure">
+  			<pre class="syntax scala">
 object HelloWorld {
   def main(args: Array[String]) {
     println("Hello, world!")
   }
-}		</pre>
-		</figure>
+}		    </pre>
+			  </figure>
+      </div>
 	  
     </section>
     
@@ -96,8 +99,9 @@ object HelloWorld {
         <h2>Aka. Namespaces</h2>
       </hgroup>
 	  
-	  <figure class="codeFigure" style="width:75ex">
-	  <pre class="syntax scala">
+      <div style="text-align:center">
+	      <figure class="codeFigure">
+	      <pre class="syntax scala">
 package net.codingwell.myapp
 
 import net.codingwell.myapp.magic.MagicFactory
@@ -105,6 +109,7 @@ import net.codingwell.myapp.useful.{OneClass, AnotherClass}
 import net.codingwell.{VeryVeryLongNameForClass => ShortName}
 import net.codingwell.utils._</pre>
 	  </figure>
+    </div>
 	  
     </section>
     
@@ -113,32 +118,34 @@ import net.codingwell.utils._</pre>
       <hgroup>
         <h1><img src="images/scala.svg" style="height:0.8em;">Access Modifiers</h1>
       </hgroup>
-      
-	  <figure class="codeFigure" style="width:33ex">
+       <div style="text-align:center">
+	  <figure class="codeFigure">
 	  <pre class="syntax scala">
                  def ...
 protected        def ...
 private          def ...</pre>
       </figure>
-      
-	  <figure class="action codeFigure" style="width:33ex">
+      </div>
+      <div style="text-align:center">
+	  <figure class="action codeFigure">
 	  <pre class="syntax scala">
 protected[utils] def ...
 private[myapp]   def ...
 private[this]    def ...</pre>
 	  </figure>
-	  
+	  </div>
     </section>
 	<section>
       <hgroup>
         <h1><img src="images/scala.svg" style="height:0.8em;">Type Inference</h1>
         <h2>Auto</h2>
       </hgroup>
-	  
-	  <figure class="codeFigure" style="width:50ex">
+	  <div style="text-align:center">
+	  <figure class="codeFigure">
       <pre class="syntax scala">
 val variable = doSomething( "parameter" )</pre>
-	  </figure>  
+	  </figure>
+    </div>
 	  
     </section>
 	<section>
